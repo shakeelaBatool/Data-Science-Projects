@@ -1,12 +1,12 @@
 
 
-## Table of Contents
+
 # 📊 Beginner Data Science Projects
 
 A collection of beginner-level Data Science projects
 that I am building while learning Python, Data Analysis,
 Data Visualization, and Machine Learning.
-
+## Table of Contents
 ---
 
 ## 📚 Learning Path
@@ -22,5 +22,3 @@ EDA, and basic visualization.
 | # | Project | What You'll Learn | Category |
 |---|---------|-------------------|----------|
 | 1 | [Titanic Survival Analysis](./Titanic-Survival-Analysis) | Data loading, cleaning, EDA, visualization | Classification |
-| 2 | Iris Flower Analysis | Data exploration, visualization, basic statistics | Classification |
-| 3 | Food Nutrition Analysis | Data cleaning, missing values, analysis | Data Analysis |
