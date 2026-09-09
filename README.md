@@ -24,32 +24,6 @@ Get comfortable with Python, Pandas, data cleaning, EDA, and basic visualization
 | # | Project | What You'll Learn | Category |
 |---|---------|-------------------|----------|
 | 1 | [🚢 Titanic Survival Analysis](./Titanic-Survival-Analysis) | Data cleaning, EDA, visualization | Classification |
-| 2 | [🌸 Iris Flower Analysis](./Iris-Dataset-Analysis) | Data exploration, visualization, basic statistics | Classification |
-| 3 | [🍎 Food Nutrition Analysis](./Food-Nutrition-Analysis) | Data cleaning, missing values, data analysis | Data Analysis |
-
----
-
-## 🟡 Level 2 — Machine Learning
-
-Build your understanding of basic ML algorithms and model evaluation.
-
-| # | Project | What You'll Learn | Category |
-|---|---------|-------------------|----------|
-| 1 | Iris Classification | Train/test split, classification, model evaluation | Classification |
-| 2 | Linear Regression | Regression, prediction, evaluation | Regression |
-| 3 | Customer Churn | Logistic regression, prediction, evaluation | Classification |
-
----
-
-## 🔵 Level 3 — Advanced Projects
-
-Explore advanced ML techniques, feature engineering, and real-world applications.
-
-| # | Project | What You'll Learn | Category |
-|---|---------|-------------------|----------|
-| 1 | Coming Soon | Advanced ML, deep learning | Machine Learning |
-| 2 | Coming Soon | Feature engineering, model tuning | Machine Learning |
-| 3 | Coming Soon | AI applications, real-world projects | AI |
 
 ---
 
@@ -83,8 +57,6 @@ Explore advanced ML techniques, feature engineering, and real-world applications
 **Statistics**  
 ↓  
 **Machine Learning**  
-↓  
-**Artificial Intelligence**
 
 </div>
 
@@ -103,13 +75,11 @@ I am a BS Mathematics student interested in:
 
 - 📊 Data Science
 - 🤖 Machine Learning
-- 🧠 Artificial Intelligence
 - 📈 Data Analysis
 - 📉 Data Visualization
 
 I am learning through practical projects and improving my skills
 step by step.
-
 ---
 
 <div align="center">
