@@ -10,14 +10,14 @@
 
 ---
 
-## 📚 Learning Path
+## Learning Path
 
 Start from the top and work your way down.  
 Projects are ordered by difficulty within each level.
 
 ---
 
-## 🟢 Level 1 — Fundamentals
+## Level 1 — Fundamentals
 
 Get comfortable with Python, Pandas, data cleaning, EDA, and basic visualization.
 
@@ -27,7 +27,7 @@ Get comfortable with Python, Pandas, data cleaning, EDA, and basic visualization
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 
 <p align="center">
 
@@ -42,7 +42,7 @@ Get comfortable with Python, Pandas, data cleaning, EDA, and basic visualization
 
 ---
 
-## 📈 My Learning Journey
+## My Learning Journey
 
 <div align="center">
 
@@ -62,14 +62,14 @@ Get comfortable with Python, Pandas, data cleaning, EDA, and basic visualization
 
 ---
 
-## 🎯 My Goal
+## My Goal
 
 To build strong foundations in Data Science and gradually move
 towards Machine Learning, AI, and real-world data-driven projects.
 
 ---
 
-## 👩‍💻 About Me
+## About Me
 
 I am a BS Mathematics student interested in:
 
