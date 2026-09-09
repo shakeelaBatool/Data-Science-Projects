@@ -84,7 +84,7 @@ class_survival = pd.crosstab(
     normalize="index"
 ) * 100
 
-print("\nSurvival Rate by Passenger Class:")
+print("\nSurvival Rate by Passenger Class:\n")
 print(class_survival)
 
 
@@ -95,7 +95,7 @@ sibsp_survival = pd.crosstab(
     normalize="index"
 ) * 100
 
-print("\nSurvival Rate by SibSp:")
+print("\nSurvival Rate by SibSp:\n")
 print(sibsp_survival)
 
 
