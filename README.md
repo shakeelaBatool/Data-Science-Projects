@@ -12,8 +12,7 @@
 
 ## Learning Path
 
-Start from the top and work your way down.  
-Projects are ordered by difficulty within each level.
+Start from the top and work your way down. Projects are ordered by difficulty within each level.
 
 ---
 
