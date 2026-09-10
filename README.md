@@ -22,7 +22,7 @@ Get comfortable with Python, Pandas, data cleaning, EDA, and basic visualization
 
 | # | Project | What You'll Learn | Category |
 |---|---------|-------------------|----------|
-| 1 | [🚢 Titanic Survival Analysis](./Titanic-Survival-Analysis) | Data cleaning, EDA, visualization | Classification |
+| 1 | [ Titanic Survival Analysis](./Titanic-Survival-Analysis) | Data cleaning, EDA, visualization | Classification |
 
 ---
 
