@@ -23,7 +23,7 @@ Get comfortable with Python, Pandas, data cleaning, EDA, and basic visualization
 | # | Project | What You'll Learn | Category |
 |---|---------|-------------------|----------|
 | 1 | [ Titanic Survival Analysis](./Titanic-Survival-Analysis) | Data cleaning, EDA, visualization | Classification |
-| 2 | [Iris-Flower-Classification](https://github.com/shakeelaBatool/Data-Science-Projects/tree/main/Iris%20Flower%20Classification)) | Data cleaning, EDA, visualization | Classification |
+| 2 | [Iris-Flower-Classification](https://github.com/shakeelaBatool/Data-Science-Projects/tree/main/Iris%20Flower%20Classification) | Data cleaning, EDA, visualization | Classification |
 ---
 
 ## Tools & Technologies
