@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 data=pd.read_csv('Titanic_dataset.csv')
 # print(data.head(5))
 
-# Understand Data
+# Understand Data 
 
 print(data.info())
 # print(data.shape)
