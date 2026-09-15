@@ -1,17 +1,17 @@
 <div align="center">
 
-# 🚢 Titanic Survival Analysis
+# Titanic Survival Analysis
 
 ### Exploring Survival Patterns Through Data
 
 A beginner-level Data Science project focused on exploring,
 cleaning, analyzing, and visualizing the famous Titanic dataset.
 
-</div>
+
 
 ---
 
-## 📌 About the Project
+##  About the Project
 
 The Titanic Survival Analysis project explores passenger data from the
 Titanic disaster to understand the factors associated with survival.
@@ -22,15 +22,15 @@ patterns in passenger survival.
 
 The analysis mainly focuses on:
 
-- 👩 Gender
-- 🎟️ Passenger Class
-- 🎂 Age
-- 👨‍👩‍👧 Family-related information
-- 🚢 Overall Survival
+- Gender
+- Passenger Class
+- Age
+- Family-related information
+- Overall Survival
 
 ---
 
-## 🎯 Project Objective
+## Project Objective
 
 The main objective of this project is to understand how different
 passenger characteristics were associated with survival.
@@ -41,7 +41,7 @@ This project helped me build a practical foundation in:
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 The project uses the **Titanic passenger dataset**.
 
@@ -68,7 +68,7 @@ The project uses the **Titanic passenger dataset**.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 Titanic-Survival-Analysis/
 │
@@ -88,7 +88,7 @@ loading the dataset to extracting meaningful insights.
 ---
 ---
 
-## 🔍 Analysis Performed
+## Analysis Performed
 
 ### 1. Data Understanding
 
@@ -138,7 +138,7 @@ across different passenger groups.
 
 ---
 
-## 📊 Results of the Project
+## Results of the Project
 
 ### Overall Survival
 
@@ -164,9 +164,9 @@ across different passenger groups.
 
 ---
 
-## 💡 Key Findings
+## Key Findings
 
-### 👩 Gender
+### Gender
 
 Gender showed a significant difference in survival rates.
 
@@ -176,7 +176,7 @@ Gender showed a significant difference in survival rates.
 Female passengers in this dataset had a much higher survival rate
 than male passengers.
 
-### 🎟️ Passenger Class
+### Passenger Class
 
 Passenger class was also strongly associated with survival.
 
@@ -187,17 +187,17 @@ Passenger class was also strongly associated with survival.
 Passengers in higher classes had higher survival rates than those
 in lower classes.
 
-### 🎂 Age
+### Age
 
 Age was analyzed by comparing the average age of survivors and
 non-survivors and by examining different age groups.
 
-### 👨‍👩‍👧 SibSp
+### SibSp
 
 The number of siblings or spouses aboard was analyzed to explore
 differences in survival rates among different groups.
 
-### 🚢 Overall Survival
+### Overall Survival
 
 Out of 891 passengers:
 
@@ -206,8 +206,9 @@ Out of 891 passengers:
 - Overall survival rate was approximately **38.4%**
 
 ---
+</div>
 
-## 📈 Data Visualization
+## Data Visualization
 
 Visualizations were created to make the analysis and patterns
 easier to understand.
