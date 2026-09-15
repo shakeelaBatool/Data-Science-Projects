@@ -11,7 +11,8 @@ cleaning, analyzing, and visualizing the famous Titanic dataset.
 
 ---
 
-##  About the Project
+##  About the Project  </div>
+
 
 The Titanic Survival Analysis project explores passenger data from the
 Titanic disaster to understand the factors associated with survival.
@@ -206,7 +207,6 @@ Out of 891 passengers:
 - Overall survival rate was approximately **38.4%**
 
 ---
-</div>
 
 ## Data Visualization
 
