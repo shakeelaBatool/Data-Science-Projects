@@ -87,6 +87,7 @@ This project contains one Jupyter Notebook:
 The notebook follows a beginner-friendly Data Science workflow from
 loading the dataset to extracting meaningful insights.
 ---
+---
 
 ## 🔍 Analysis Performed
 
@@ -220,7 +221,7 @@ The project includes visual analysis of:
 - Age-related patterns
 - Other categorical relationships
 
-Example:
+### Example: Survival by Gender
 
 ```python
 pd.crosstab(
