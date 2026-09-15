@@ -70,7 +70,6 @@ The project uses the **Titanic passenger dataset**.
 
 ## 📁 Project Structure
 
-```text
 Titanic-Survival-Analysis/
 │
 ├── Titanic_dataset.csv
