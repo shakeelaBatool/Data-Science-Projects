@@ -1,4 +1,3 @@
-<div align="center">
 
 # Heart Failure Prediction
 
@@ -8,7 +7,7 @@ A beginner-level Machine Learning project that uses clinical
 patient data and Logistic Regression to predict heart failure
 death events.
 
-</div>
+
 
 ---
 
@@ -23,9 +22,15 @@ and applies **Logistic Regression** as a binary classification model.
 
 The project follows the workflow:
 
-**Data Loading → Data Understanding → Data Processing → EDA → 
-Visualization → Train-Test Split → Logistic Regression → 
-Model Evaluation → Prediction**
+**Data Loading 
+→ Data Understanding 
+→ Data Processing 
+→ EDA 
+→ Visualization 
+→ Train-Test Split 
+→ Logistic Regression 
+→ Model Evaluation 
+→ Prediction**
 
 ---
 
