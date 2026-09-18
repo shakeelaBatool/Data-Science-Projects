@@ -1,11 +1,11 @@
 
+
 # Heart Failure Prediction
 
-### Predicting Heart Failure Outcomes Using Machine Learning
+### A Beginner Machine Learning Project
 
-A beginner-level Machine Learning project that uses clinical
-patient data and Logistic Regression to predict heart failure
-death events.
+A beginner-level Data Science project using patient clinical data
+to predict `DEATH_EVENT` using Logistic Regression.
 
 
 
@@ -13,42 +13,39 @@ death events.
 
 ## About the Project
 
-Heart Failure Prediction is a supervised Machine Learning project
-focused on predicting whether a death event occurred based on
-clinical information about patients.
+This project uses the **Heart Failure Clinical Records Dataset**
+to explore patient information and build a simple Machine Learning
+model.
 
-The project uses the **Heart Failure Clinical Records Dataset**
-and applies **Logistic Regression** as a binary classification model.
+In this project, I used **Logistic Regression** to predict the
+`DEATH_EVENT` target.
 
-The project follows the workflow:
+The project helped me understand the basic Machine Learning
+workflow:
 
-**Data Loading 
-→ Data Understanding 
-→ Data Processing 
-→ EDA 
-→ Visualization 
-→ Train-Test Split 
-→ Logistic Regression 
-→ Model Evaluation 
-→ Prediction**
+**Data Loading <br>→ Data Understanding <br>→ Data Processing <br>→ EDA <br>→ 
+Visualization <br>→ Train-Test Split <br>→ Model Training <br>→ Evaluation**
 
 ---
 
-## Project Objective
+## 🎯 Project Objective
 
-The main objective of this project is to build a Machine Learning
-model that can classify patients based on the `DEATH_EVENT` target.
+The main objective of this project is to:
 
-The project helped me understand the complete beginner-level
-Machine Learning workflow, from preparing clinical data to
-training and evaluating a classification model.
+- Understand a real-world dataset
+- Perform basic data processing
+- Explore the data using EDA
+- Create simple visualizations
+- Train a Logistic Regression model
+- Evaluate the model's performance
+- Make predictions
 
-> **Note:** This project is for educational purposes and is not
-> intended for medical diagnosis or clinical decision-making.
+> **Note:** This project is created for learning purposes only
+> and is not intended for medical diagnosis.
 
 ---
 
-## Dataset
+## 📊 Dataset
 
 The project uses the **Heart Failure Clinical Records Dataset**.
 
@@ -57,9 +54,10 @@ The project uses the **Heart Failure Clinical Records Dataset**.
 | Information | Details |
 |---|---|
 | Dataset | Heart Failure Clinical Records |
-| Problem Type | Binary Classification |
-| Features | 12 clinical features |
+| Rows | 299 |
+| Features | 12 |
 | Target | `DEATH_EVENT` |
+| Problem Type | Classification |
 | Model | Logistic Regression |
 
 ### Features
@@ -86,7 +84,7 @@ The project uses the **Heart Failure Clinical Records Dataset**.
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 Heart-Failure-Prediction/
