@@ -7,7 +7,6 @@ data=pd.read_csv('Housing.csv')
 print(data.head(5))
 
 print(f'Basic information of data\n{data.info()}')
-
 print(data.isnull().sum())
 # Removing Duplicates
 data=data.drop_duplicates()
