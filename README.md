@@ -25,6 +25,8 @@ Get comfortable with Python, Pandas, data cleaning, EDA, and basic visualization
 | 2 | [Iris-Flower-Classification](https://github.com/shakeelaBatool/Data-Science-Projects/tree/main/Iris%20Flower%20Classification) | Data cleaning, EDA, visualization | Classification |
 | 3 | [Heart-Failure-Prediction](https://github.com/shakeelaBatool/Data-Science-Projects/tree/main/Heart-Failure-Prediction) |Data Cleaning • Machine Learning • Model Comparison | Classification |
 ## Level 2
+| # | Project | What You'll Learn | Category |
+|---|---------|-------------------|----------|
 | 1 | [Text Summarization-NLP](./Text-Summarization-NLP) | Data cleaning, EDA, visualization | Classification |
 
 ---
