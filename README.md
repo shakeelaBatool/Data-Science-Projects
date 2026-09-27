@@ -15,7 +15,7 @@
 Start from the top and work your way down. Projects are ordered by difficulty within each level.
 
 ---
-
+https://github.com/shakeelaBatool/Data-Science-Projects/tree/main/Text-Summarization-NLP
 ## Level 1 — Fundamentals
 
 Get comfortable with Python, Pandas, data cleaning, EDA, and basic visualization.
@@ -24,6 +24,8 @@ Get comfortable with Python, Pandas, data cleaning, EDA, and basic visualization
 | 1 | [Titanic Survival Analysis](./Titanic-Survival-Analysis) | Data cleaning, EDA, visualization | Classification |
 | 2 | [Iris-Flower-Classification](https://github.com/shakeelaBatool/Data-Science-Projects/tree/main/Iris%20Flower%20Classification) | Data cleaning, EDA, visualization | Classification |
 | 3 | [Heart-Failure-Prediction](https://github.com/shakeelaBatool/Data-Science-Projects/tree/main/Heart-Failure-Prediction) |Data Cleaning • Machine Learning • Model Comparison | Classification |
+## Level 2
+| 1 | [Text Summarization-NLP](./Text-Summarization-NLP) | Data cleaning, EDA, visualization | Classification |
 
 ---
 
