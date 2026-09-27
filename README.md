@@ -15,7 +15,7 @@
 Start from the top and work your way down. Projects are ordered by difficulty within each level.
 
 ---
-https://github.com/shakeelaBatool/Data-Science-Projects/tree/main/Text-Summarization-NLP
+
 ## Level 1 — Fundamentals
 
 Get comfortable with Python, Pandas, data cleaning, EDA, and basic visualization.
