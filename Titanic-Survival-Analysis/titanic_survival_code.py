@@ -18,7 +18,6 @@ print(data["Pclass"].unique())
 print(data.isnull().sum())
 
 # EDA
-
 print(data["Sex"].value_counts())
 print(data["Pclass"].value_counts())
 print(data["Survived"].value_counts())
