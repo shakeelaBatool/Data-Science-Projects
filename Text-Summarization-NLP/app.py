@@ -6,7 +6,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 # Download NLTK sentence tokenizer
 nltk.download("punkt_tab", quiet=True)
 
-
 # -----------------------------
 # Page Configuration
 # -----------------------------
