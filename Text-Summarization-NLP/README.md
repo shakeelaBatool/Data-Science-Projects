@@ -1,345 +1,399 @@
-# Interactive Text Summarization using NLP
+# Text Summarization using NLP
 
-## 📌 Project Overview
+## 1. Text Summarization
 
-This project focuses on **automatic text summarization using Natural Language Processing (NLP)**.
+Text summarization is an **Natural Language Processing (NLP)** task that automatically converts a long piece of text into a shorter version while preserving its important information.
 
-The system takes a long customer review and extracts the most important sentence as a short summary. The project uses a **TF-IDF-based extractive summarization approach** and evaluates the generated summaries using **ROUGE metrics**.
+In this project, **extractive text summarization** is used. Instead of generating new sentences, the system identifies the most important sentence from the original customer review and uses it as the summary.
 
-An interactive **Streamlit dashboard** is also included, allowing users to enter their own customer reviews and generate summaries.
+The project uses **TF-IDF and sentence position** to calculate the importance of each sentence.
 
----
-
-## 🎯 Problem Statement
-
-Online platforms contain a large number of customer reviews. Reading long reviews can be time-consuming, especially when users only need the main information.
-
-This project aims to automatically extract the most important sentence from a customer review and present it as a short summary.
-
----
-
-## 💡 Objective
-
-The main objectives of this project are:
-
-* Understand basic Natural Language Processing concepts.
-* Preprocess customer review text.
-* Split reviews into individual sentences.
-* Calculate sentence importance using TF-IDF.
-* Extract the most important sentence as a summary.
-* Evaluate the generated summaries using ROUGE.
-* Compare different TF-IDF summarization approaches.
-* Build an interactive Streamlit dashboard.
-
----
-
-## 📊 Dataset
-
-The project uses the **Amazon Fine Food Reviews** dataset.
-
-The dataset contains customer reviews of food products.
-
-### Important Columns
-
-| Column      | Description                 |
-| ----------- | --------------------------- |
-| `Text`      | Full customer review        |
-| `Summary`   | Human-written short summary |
-| `Score`     | Customer rating             |
-| `ProductId` | Product identifier          |
-| `UserId`    | User identifier             |
-| `Time`      | Review timestamp            |
-
-The original dataset contains **568,454 reviews**.
-
-For this project:
-
-* `Text` is used as the input review.
-* `Summary` is used as the reference summary for evaluation.
-
-Rows with missing values in the `Summary` column were removed because the reference summary is required for ROUGE evaluation.
-
----
-
-## 🧹 Data Preprocessing
-
-The preprocessing in this project is kept simple because the focus is on understanding NLP-based summarization.
-
-### Steps
-
-1. Load the dataset using Pandas.
-2. Remove rows with missing reference summaries.
-3. Convert review text to lowercase.
-4. Split the review into sentences using NLTK sentence tokenization.
-
----
-
-## 🧠 NLP Methodology
-
-The project uses **extractive text summarization**.
-
-Extractive summarization selects important sentences directly from the original text instead of generating completely new sentences.
-
-### Workflow
+### How It Works
 
 ```text
 Customer Review
        ↓
-Text Preprocessing
-       ↓
 Sentence Tokenization
        ↓
-TF-IDF
+TF-IDF Score
+       +
+Position Score
        ↓
-Sentence Scoring
+Combined Sentence Score
        ↓
-Select Highest-Scoring Sentence
+Highest-Scoring Sentence
        ↓
 Generated Summary
 ```
 
 ---
 
-## ⚙️ How the Model Works
+## 2. Problem Statement
 
-### 1. Sentence Tokenization
+Online platforms contain a large number of customer reviews. Many reviews are long and contain multiple sentences, making them time-consuming to read.
 
-The review is divided into individual sentences using NLTK.
+The objective of this project is to develop an NLP-based system that can automatically identify the most important sentence from a customer review and present it as a short summary.
+
+The project focuses on **extractive summarization**, where important sentences are selected directly from the original review.
+
+---
+
+## 3. Dataset
+
+### Dataset Used
+
+This project uses the **Amazon Fine Food Reviews Dataset**.
+
+The dataset contains customer reviews of food products purchased on Amazon. Each record contains information about the reviewer, product, rating, review text, and a human-written summary.
+
+The main file used in this project is:
+
+```text
+Reviews.csv
+```
+
+### Dataset Size
+
+The original dataset contains:
+
+* **568,454 reviews**
+* **10 columns**
+
+After removing records with missing values in the `Summary` column, the remaining data is used for summarization and evaluation.
+
+### Dataset Columns
+
+| Column                   | Description                                  | Used in Project         |
+| ------------------------ | -------------------------------------------- | ----------------------- |
+| `Id`                     | Unique ID of the review                      | No                      |
+| `ProductId`              | Unique ID of the product                     | No                      |
+| `UserId`                 | Unique ID of the reviewer                    | No                      |
+| `ProfileName`            | Name of the reviewer                         | No                      |
+| `HelpfulnessNumerator`   | Number of users who found the review helpful | No                      |
+| `HelpfulnessDenominator` | Total number of users who rated helpfulness  | No                      |
+| `Score`                  | Product rating given by the customer         | No                      |
+| `Time`                   | Time of the review                           | No                      |
+| `Summary`                | Short human-written summary of the review    | **Yes — Evaluation**    |
+| `Text`                   | Full customer review                         | **Yes — Summarization** |
+
+### Data Used for NLP
+
+The two most important columns are:
+
+#### `Text`
+
+Contains the complete customer review.
+
+Example:
+
+```text
+I have bought several of the vitality canned dog food products
+and have found them all to be of good quality. The product looks
+more like a stew than a processed meat and it smells better.
+```
+
+This is the **input text** given to the summarization system.
+
+#### `Summary`
+
+Contains the short summary written by a human.
+
+Example:
+
+```text
+Good Quality Dog Food
+```
+
+This is used as a **reference summary** when evaluating the generated summaries using ROUGE.
+
+---
+
+## 4. Project Structure
+
+```text
+Text-Summarization-NLP/
+│
+├── Text-Summarization.py
+│   └── Main NLP project
+│
+├── app.py
+│   └── Streamlit interactive dashboard
+│
+├── Reviews.csv
+│   └── Amazon Fine Food Reviews dataset
+│
+├── README.md
+│   └── Project documentation
+│
+└── screenshots/
+    └── Dashboard screenshots
+```
+
+---
+
+## 5. Methods
+
+### 5.1 Data Loading
+
+The `Reviews.csv` dataset is loaded using Pandas.
+
+The `Text` and `Summary` columns are used as the main NLP data.
+
+### 5.2 Handling Missing Values
+
+Rows with missing values in the `Summary` column are removed because the human-written summary is required for evaluation.
+
+### 5.3 Text Preprocessing
+
+The review text is converted to lowercase.
+
+Sentence punctuation is preserved because it is required for sentence tokenization.
+
+### 5.4 Sentence Tokenization
+
+The review is divided into individual sentences using **NLTK's `sent_tokenize()`**.
 
 For example:
 
 ```text
-The product is good. The quality is excellent. I will buy it again.
-```
-
-becomes:
-
-```text
+Original Review
+      ↓
 Sentence 1
 Sentence 2
 Sentence 3
 ```
 
-### 2. TF-IDF
+### 5.5 TF-IDF
 
-TF-IDF (**Term Frequency-Inverse Document Frequency**) is used to calculate the importance of words within the sentences.
+**TF-IDF (Term Frequency–Inverse Document Frequency)** is used to calculate the importance of words within the sentences.
 
-Important words receive higher TF-IDF values.
+The TF-IDF values are then combined to calculate an importance score for each sentence.
 
-### 3. Sentence Scoring
+### 5.6 Position Score
 
-The TF-IDF values of the words in each sentence are summed to calculate a sentence score.
+Sentence position is also considered.
 
-```text
-Sentence Score = Sum of TF-IDF values
-```
+Earlier sentences receive a slightly higher position score because important information in reviews can sometimes appear near the beginning.
 
-### 4. Sentence Selection
+### 5.7 Combined Score
 
-The sentence with the highest score is selected as the generated summary.
-
-The final model uses:
-
-**TF-IDF Sum + Top 1 Sentence**
-
----
-
-## 📈 Model Evaluation
-
-The generated summaries were evaluated using three ROUGE metrics:
-
-* **ROUGE-1** — measures unigram overlap.
-* **ROUGE-2** — measures bigram overlap.
-* **ROUGE-L** — measures longest common subsequence overlap.
-
-The experiments were conducted on **100 reviews**.
-
-### Experimental Results
-
-| Experiment          |    ROUGE-1 |    ROUGE-2 |    ROUGE-L |
-| ------------------- | ---------: | ---------: | ---------: |
-| TF-IDF Sum + Top 2  |     0.0996 |     0.0311 |     0.0903 |
-| TF-IDF Sum + Top 1  | **0.1168** | **0.0416** | **0.1056** |
-| TF-IDF Mean + Top 2 |     0.0996 |     0.0311 |     0.0903 |
-
-Based on these experiments, **TF-IDF Sum + Top 1** produced the highest ROUGE values among the tested approaches and was selected as the final method.
-
----
-
-## 🖥️ Streamlit Dashboard
-
-The project includes an interactive Streamlit dashboard.
-
-Users can:
-
-* Enter a customer review.
-* Generate a summary.
-* View the generated summary.
-* View the number of original sentences.
-* View sentence importance scores.
-* Identify which sentence was selected by the model.
-
-### Dashboard Workflow
+The final sentence score is calculated using:
 
 ```text
-Enter Review
-     ↓
-Click "Generate Summary"
-     ↓
-NLP Processing
-     ↓
-TF-IDF Sentence Scoring
-     ↓
-Top 1 Sentence
-     ↓
-Generated Summary
+Final Score =
+0.8 × TF-IDF Score
++
+0.2 × Position Score
 ```
 
-### Dashboard Screenshot
+The sentence with the highest final score is selected as the generated summary.
 
-Add your dashboard screenshot here:
+### 5.8 Extractive Summarization
+
+The selected sentence is taken directly from the original review.
+
+The system does **not** generate new sentences.
+
+### 5.9 Model Evaluation
+
+The generated summaries are evaluated against the human-written `Summary` column using:
+
+* ROUGE-1
+* ROUGE-2
+* ROUGE-L
+
+The experiments were performed on a sample of **100 reviews**.
+
+---
+
+## 6. Results
+
+Several summarization experiments were tested using the same 100-review sample.
+
+| Experiment          |                          ROUGE-1 |         ROUGE-2 |         ROUGE-L |
+| ------------------- | -------------------------------: | --------------: | --------------: |
+| TF-IDF Sum + Top 2  |                           0.0996 |          0.0311 |          0.0903 |
+| TF-IDF Sum + Top 1  |                           0.1168 |          0.0416 |          0.1056 |
+| TF-IDF Mean + Top 2 |                           0.0996 |          0.0311 |          0.0903 |
+| TF-IDF + Position   | *To be updated after experiment* | *To be updated* | *To be updated* |
+
+### Evaluation Metrics
+
+**ROUGE-1** measures overlap of individual words between the generated and reference summaries.
+
+**ROUGE-2** measures overlap of two-word sequences.
+
+**ROUGE-L** measures similarity based on the longest common subsequence.
+
+The current baseline experiment, **TF-IDF Sum + Top 1**, produced:
 
 ```text
-![Streamlit Dashboard](screenshots/dashboard.png)
+ROUGE-1: 0.1168
+ROUGE-2: 0.0416
+ROUGE-L: 0.1056
 ```
 
----
-
-## 🧪 Testing
-
-The dashboard was tested using different types of customer reviews, including:
-
-* Positive reviews
-* Negative reviews
-* Mixed-feedback reviews
-* Longer reviews
-* Reviews containing multiple opinions
-
-The purpose of testing was to observe whether the selected sentence represents the main idea of the original review.
+The TF-IDF + Position experiment will be compared with this baseline before selecting the final method.
 
 ---
 
-## 🔍 Key Findings
+## 7. Findings
 
-* TF-IDF can be used to identify important sentences in customer reviews.
-* Extractive summarization selects sentences directly from the original review.
-* In the tested experiments, selecting one sentence produced higher ROUGE values than selecting two sentences.
-* Human-written summaries can be much shorter than extracted summaries.
-* ROUGE is based on word overlap, so it may not completely represent semantic similarity.
-* The final model is simple and suitable for understanding the basic workflow of NLP-based summarization.
+The project produced the following findings:
 
----
+1. **Extractive summarization can identify important sentences** from customer reviews using simple NLP techniques.
 
-## ⚠️ Limitations
+2. **TF-IDF provides a useful sentence-importance signal** by measuring the importance of words within the review.
 
-* The system is **extractive**, so it cannot generate new sentences.
-* The selected sentence may not always represent the complete meaning of a long review.
-* Human-written summaries are often very short, while extracted sentences can be longer.
-* ROUGE measures lexical overlap and does not completely evaluate meaning.
-* Model evaluation was performed on a sample of 100 reviews.
+3. Selecting **one sentence** performed better than selecting two sentences in the tested 100-review sample according to the ROUGE scores.
 
----
+4. The generated summaries can be longer than human-written summaries because the system selects complete original sentences rather than generating shorter text.
 
-## 🚀 Future Improvements
+5. The human-written `Summary` is often very short, while an extractive system may select a complete sentence containing more words.
 
-Possible future improvements include:
+6. Adding **sentence position** provides another signal that can be combined with TF-IDF. Its effectiveness should be determined from the ROUGE comparison rather than assumed.
 
-* Abstractive text summarization.
-* Transformer-based summarization models.
-* Better control over summary length.
-* Evaluation on a larger sample of reviews.
-* Comparison with advanced NLP summarization techniques.
-* Improved dashboard design and deployment.
+7. The project demonstrates a complete beginner-level NLP pipeline from raw customer reviews to an interactive summarization application.
 
 ---
 
-## 🛠️ Technologies Used
+## 8. Tech Stack
 
-* **Python**
-* **Pandas**
-* **NumPy**
-* **NLTK**
-* **Scikit-learn**
-* **ROUGE**
-* **Streamlit**
-* **Matplotlib**
-* **Seaborn**
+### Programming Language
+
+* Python
+
+### Data Processing
+
+* Pandas
+* NumPy
+
+### Natural Language Processing
+
+* NLTK
+* Scikit-learn
+* TF-IDF
+
+### Evaluation
+
+* ROUGE
+
+### Visualization / Development
+
+* Matplotlib
+* Seaborn
+
+### Dashboard
+
+* Streamlit
+
+### Dataset
+
+* Amazon Fine Food Reviews Dataset
 
 ---
 
-## 📂 Project Structure
+## 9. Getting Started
 
-```text
-Text-Summarization-NLP/
-│
-├── app.py
-├── Text-Summarization-NLP.ipynb
-├── README.md
-└── screenshots/
-    └── dashboard.png
-```
-
----
-
-## ▶️ How to Run
-
-### 1. Clone the Repository
+### Step 1 — Clone the Repository
 
 ```bash
-git clone https://github.com/shakeelaBatool/Data-Science-Projects.git
+git clone <your-repository-url>
 ```
 
-### 2. Navigate to the Project Folder
+Move into the project folder:
 
 ```bash
-cd Data-Science-Projects/Text-Summarization-NLP
+cd Text-Summarization-NLP
 ```
 
-### 3. Install Required Libraries
+### Step 2 — Install Required Libraries
 
 ```bash
 pip install pandas numpy nltk scikit-learn rouge-score streamlit matplotlib seaborn
 ```
 
-### 4. Run the Streamlit Dashboard
+### Step 3 — Run the Main NLP Project
+
+```bash
+python Text-Summarization.py
+```
+
+The main file performs:
+
+```text
+Data Loading
+     ↓
+Data Understanding
+     ↓
+Preprocessing
+     ↓
+Sentence Tokenization
+     ↓
+TF-IDF
+     ↓
+Sentence Scoring
+     ↓
+Summarization
+     ↓
+ROUGE Evaluation
+```
+
+### Step 4 — Run the Streamlit Dashboard
 
 ```bash
 streamlit run app.py
 ```
 
-The dashboard will open in your web browser.
+The dashboard will open in the browser.
+
+### Step 5 — Enter a Review
+
+Paste a customer review into the text box and click:
+
+```text
+Generate Summary
+```
+
+The application will:
+
+```text
+Input Review
+     ↓
+Sentence Tokenization
+     ↓
+TF-IDF Score
+     +
+Position Score
+     ↓
+Final Score
+     ↓
+Most Important Sentence
+     ↓
+Generated Summary
+```
 
 ---
 
-## 👩‍💻 Author
+## 10. Project Status
+
+**Status:** Completed beginner-level NLP project with an interactive Streamlit dashboard.
+
+The project currently demonstrates **extractive text summarization using TF-IDF-based sentence scoring**, with sentence position being tested as a model improvement.
+
+Future improvements may include more advanced summarization methods such as **TextRank, BERT-based summarization, or Transformer-based abstractive summarization**.
+
+---
+
+## Author
 
 **Shakeela Batool**
 
-BS Mathematics Student
+BS Mathematics
 Namal University
-
-Interested in:
-
-* Data Science
-* Machine Learning
-* Natural Language Processing
-* Artificial Intelligence
 
 ---
 
-## 📌 Project Status
+## License
 
-**Completed — Beginner-Level NLP Project**
-
-The project includes:
-
-* Dataset Analysis ✅
-* Text Preprocessing ✅
-* Sentence Tokenization ✅
-* TF-IDF Summarization ✅
-* ROUGE Evaluation ✅
-* Model Experiments ✅
-* Final Model ✅
-* Streamlit Dashboard ✅
-* Testing ✅
-* GitHub Documentation ✅
+This project is created for educational and portfolio purposes.
