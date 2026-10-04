@@ -1,1 +1,301 @@
+# 💬 Toxic Comment Classification
 
+A beginner-level **Natural Language Processing (NLP)** project that classifies online comments as **Toxic** or **Non-Toxic** using **TF-IDF** and **Multinomial Naive Bayes**.
+
+The project also includes a simple **Streamlit web application** where users can enter a comment and receive an instant classification.
+
+---
+
+## 📌 Problem Statement
+
+Online platforms receive a large number of comments every day. Some comments may contain insults, offensive language, or toxic expressions.
+
+Manually identifying these comments can be difficult when dealing with large amounts of text.
+
+This project uses **Natural Language Processing and Machine Learning** to automatically classify comments into:
+
+* ⚠️ **Toxic**
+* ✅ **Non-Toxic**
+
+---
+
+## 🎯 Project Objectives
+
+* Understand the basics of **NLP text classification**
+* Clean and preprocess text data
+* Convert text into numerical features using **TF-IDF**
+* Train a **Multinomial Naive Bayes** classifier
+* Evaluate the model using classification metrics
+* Build a simple **Streamlit application** for real-time prediction
+
+---
+
+## 🧠 Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* NLTK
+* Matplotlib
+* Streamlit
+* Joblib
+
+---
+
+## 🔄 Project Workflow
+
+```text
+Online Comments
+       ↓
+Data Cleaning
+       ↓
+Text Preprocessing
+       ↓
+TF-IDF Feature Extraction
+       ↓
+Multinomial Naive Bayes
+       ↓
+Model Evaluation
+       ↓
+Toxic / Non-Toxic
+       ↓
+Streamlit Web App
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+Toxic-Comment-Classification/
+│
+├── data_set/
+│   └── comments.csv
+│
+├── toxic_comment_classification.py
+│
+├── app.py
+│
+├── toxic_comment_model.pkl
+│
+├── tfidf_vectorizer.pkl
+│
+└── README.md
+```
+
+---
+
+## 🧹 Text Preprocessing
+
+Before training the model, the comments are cleaned to make the text easier for the machine learning algorithm to process.
+
+The preprocessing includes:
+
+* Converting text to lowercase
+* Removing HTML tags
+* Removing URLs
+* Removing newline characters
+* Removing unnecessary special characters
+* Removing extra spaces
+
+---
+
+## 🔢 TF-IDF
+
+**TF-IDF (Term Frequency–Inverse Document Frequency)** is used to convert text into numerical features.
+
+It gives higher importance to words that are useful for distinguishing between different comments.
+
+In this project, TF-IDF transforms the cleaned comments into numerical vectors that can be provided to the machine learning model.
+
+---
+
+## 🤖 Machine Learning Model
+
+### Multinomial Naive Bayes
+
+The project uses **Multinomial Naive Bayes** for classification.
+
+It is a suitable beginner-level algorithm for text classification because it:
+
+* Works well with text features
+* Works with TF-IDF representations
+* Is fast to train
+* Is simple to understand
+* Works well for classification problems
+
+The model predicts one of two classes:
+
+```text
+0 → Non-Toxic
+1 → Toxic
+```
+
+---
+
+## 📊 Model Evaluation
+
+The model was evaluated using:
+
+* Accuracy
+* Precision
+* Recall
+* F1-score
+* Confusion Matrix
+
+### Accuracy
+
+The model achieved approximately:
+
+**90% accuracy**
+
+### Confusion Matrix
+
+```text
+[[5429  171]
+ [ 628 1772]]
+```
+
+The confusion matrix helps us understand how many comments were correctly and incorrectly classified in each class.
+
+---
+
+## 🖥️ Streamlit Application
+
+A simple Streamlit interface was created for testing the trained model.
+
+The user enters a comment:
+
+```text
+Thank you for sharing this information.
+```
+
+The application processes the text and predicts:
+
+```text
+✅ Non-Toxic Comment
+```
+
+For a toxic example such as:
+
+```text
+You are completely useless and stupid.
+```
+
+The application can return:
+
+```text
+⚠️ Toxic Comment
+```
+
+---
+
+## 🚀 How to Run the Project
+
+### 1. Clone the repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+### 2. Navigate to the project folder
+
+```bash
+cd Toxic-Comment-Classification
+```
+
+### 3. Install required libraries
+
+```bash
+pip install pandas numpy scikit-learn nltk matplotlib streamlit joblib
+```
+
+### 4. Train the model
+
+Run:
+
+```bash
+python toxic_comment_classification.py
+```
+
+This creates:
+
+```text
+toxic_comment_model.pkl
+tfidf_vectorizer.pkl
+```
+
+### 5. Run the Streamlit application
+
+```bash
+streamlit run app.py
+```
+
+The application will open in your browser.
+
+---
+
+## 💡 Example
+
+### Input
+
+```text
+I really enjoyed reading your article. Thank you for sharing.
+```
+
+### Output
+
+```text
+✅ Non-Toxic Comment
+```
+
+---
+
+## 📚 What I Learned
+
+Through this project, I learned the basic workflow of an NLP machine learning project:
+
+* Text preprocessing
+* Feature extraction
+* TF-IDF
+* Text classification
+* Multinomial Naive Bayes
+* Model evaluation
+* Confusion matrix
+* Saving trained models with Joblib
+* Building a Streamlit application
+
+---
+
+## 🔮 Future Improvements
+
+This beginner-level project can be improved in the future by:
+
+* Using a larger and more diverse dataset
+* Handling multiple types of toxicity
+* Testing additional machine learning algorithms
+* Improving text preprocessing
+* Using advanced NLP models such as Transformers
+* Deploying the application online
+
+---
+
+## 👩‍💻 Author
+
+**Shakeela Batool**
+
+BS Mathematics Student
+Namal University
+
+---
+
+## ⭐ Project Summary
+
+**Toxic Comment Classification** is a beginner-friendly NLP project that demonstrates how machine learning can be used to automatically classify online comments as **Toxic or Non-Toxic**.
+
+The project combines:
+
+**NLP + TF-IDF + Multinomial Naive Bayes + Streamlit**
+
+to create a simple end-to-end text classification system.
