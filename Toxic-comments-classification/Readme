@@ -1,3 +1,4 @@
+<div>
 # 💬 Toxic Comment Classification
 
 A beginner-level **Natural Language Processing (NLP)** project that classifies online comments as **Toxic** or **Non-Toxic** using **TF-IDF** and **Multinomial Naive Bayes**.
@@ -292,3 +293,4 @@ The project combines:
 **NLP + TF-IDF + Multinomial Naive Bayes + Streamlit**
 
 to create a simple end-to-end text classification system.
+<\div>
