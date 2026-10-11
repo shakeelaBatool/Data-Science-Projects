@@ -53,7 +53,7 @@ data.shape
 
 data.head()
 
-
+print("*"*30)
 
 """# Data Processing"""
 
