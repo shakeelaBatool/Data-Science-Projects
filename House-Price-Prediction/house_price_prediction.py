@@ -25,7 +25,7 @@ print(data.describe())
 # price vs area
 
 plt.scatter(data['area'],data['price'], color='blue')
-plt.xlabel('Area of House')
+plt.xlabel('Area of the House')
 plt.ylabel('Price of House')
 plt.title('Price vs Area')
 plt.show()
