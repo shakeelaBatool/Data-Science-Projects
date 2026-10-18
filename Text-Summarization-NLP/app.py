@@ -9,7 +9,7 @@ from text_summarization import summarize_text
 
 st.set_page_config(
     page_title="AI Text Summarizer",
-    page_icon="📝",
+    page_icon="📝 ",
     layout="wide"
 )
 
