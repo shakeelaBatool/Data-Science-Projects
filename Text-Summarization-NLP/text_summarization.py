@@ -101,6 +101,6 @@ def summarize_text(
             print("Error while summarizing:", e)
 
     # Combine summaries
-    final_summary = " ".join(summaries)
+    final_summary =" ".join(summaries)
 
     return final_summary
