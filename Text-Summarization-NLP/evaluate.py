@@ -4,7 +4,6 @@ from rouge_score import rouge_scorer
 
 from text_summarization import summarize_text
 
-
 # =========================================================
 # SETTINGS
 # ========================================================
