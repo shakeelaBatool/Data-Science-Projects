@@ -18,7 +18,7 @@ import seaborn as sns
 
 from google.colab import files
 
-data = files.upload()
+data =files.upload()
 
 """# Understand the Data"""
 
