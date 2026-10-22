@@ -16,7 +16,7 @@ print(type(data))
 
 # Basic statistic
 
-print(data.describe())
+print( data.describe())
 # for i in data:
 #     print(i)
 
