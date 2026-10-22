@@ -50,7 +50,7 @@ pd.crosstab(data["Sex"], data["Survived"]).plot(kind="bar")
 plt.title("Survival by Sex")
 plt.xlabel("Sex")
 plt.ylabel("Number of Passengers")
-plt.xticks(rotation=0)
+plt.xticks(rotation= 0)
 plt.show()
 # Statistical Analysis
 
