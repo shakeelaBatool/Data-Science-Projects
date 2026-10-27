@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📊 Beginner Data Science Projects
+#  Beginner Data Science Projects
 
 ### A collection of my beginner-level Data Science projects
 
