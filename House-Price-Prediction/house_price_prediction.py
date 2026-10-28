@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-data=pd.read_csv('Housing.csv')
+data= pd.read_csv('Housing.csv')
 print(data.head(5))
 
 print(f'Basic information of data\n{data.info()}')
