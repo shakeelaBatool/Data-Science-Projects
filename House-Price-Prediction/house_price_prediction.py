@@ -9,7 +9,7 @@ print(data.head(5))
 print(f'Basic information of data\n{data.info()}')
 print(data.isnull().sum())
 # Removing Duplicates
-data=data.drop_duplicates()
+data= data.drop_duplicates()
 print(data)                      
 # data type of the dataset
 print(type(data))
