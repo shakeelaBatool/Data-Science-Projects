@@ -69,7 +69,7 @@ if st.button("Generate Summary"):
     else:
 
         # Choose length
-        if summary_length == "Short":
+        if summary_length =="Short":
 
             min_length = 20
             max_length = 70
