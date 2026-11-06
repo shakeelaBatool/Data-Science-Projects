@@ -30,7 +30,7 @@ data.shape
 
 data.info()
 
-data = data.iloc[:, 0].str.split(',', expand=True)
+data =data.iloc[:, 0].str.split(',', expand=True)
 print(data.shape)
 data.columns = [
     'age',
