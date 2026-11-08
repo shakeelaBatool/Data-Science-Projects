@@ -59,7 +59,7 @@ plt.show()
 # Statistical Analysis
 
 # 1. Overall survival percentage
-survival_rate = data["Survived"].value_counts(normalize=True) * 100
+survival_rate =data["Survived"].value_counts(normalize=True) * 100
 print("Overall Survival Rate:")
 print(survival_rate)
 
